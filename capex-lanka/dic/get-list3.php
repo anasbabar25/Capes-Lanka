@@ -1,0 +1,22 @@
+<?php 
+include('include/conn.php');
+
+$html='<select name="department" id="department" class="form-control">';
+if($_POST['TID']=='4'){
+	$TID=3;
+$select=mysqli_query('select * from tbldepts where tID="'.$TID.'" and dName like "%USER%" order by dName asc');	
+}elseif($_POST['TID']=='5'){
+	$TID=1;
+$select=mysqli_query('select * from tbldepts where tID="'.$TID.'" and dName="MD" order by dName asc');	
+}elseif($_POST['TID']=='6'){
+	$TID=1;
+$select=mysqli_query('select * from tbldepts where tID="'.$TID.'" and dName="INV" order by dName asc');	
+}else{
+$select=mysqli_query('select * from tbldepts where tID="'.$_POST['TID'].'" and dName not like "%USER%" and dName!="INV" and dName!="MD" and dName!="HOE" order by dName asc');
+}
+while($row=mysqli_fetch_array($select)){
+$html.='<option value="'.$row['dName'].'" class="even">'.$row['dName'].'</option>';
+}
+$html.='</select">';
+echo $html;
+?>

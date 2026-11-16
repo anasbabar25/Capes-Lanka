@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f9fc;
+  --foreground: #0f172a;
+
+  /* PLL brand palette */
+  --pll-cyan: #00adef;
+  --pll-cyan-dark: #0090cc;
+  --pll-cyan-light: #e6f7fd;
+  --pll-cyan-glow: rgba(0, 173, 239, 0.18);
+  --pll-black: #111111;
+  --pll-white: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-pll-cyan: var(--pll-cyan);
+  --color-pll-cyan-dark: var(--pll-cyan-dark);
+  --color-pll-cyan-light: var(--pll-cyan-light);
+  --color-pll-black: var(--pll-black);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+button:not(:disabled),
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+[role="option"] {
+  cursor: pointer;
+}
+
+.login-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, var(--pll-cyan-glow), transparent),
+    linear-gradient(165deg, #f8fcfe 0%, #eef6fb 45%, #f4f9fc 100%);
+}
+
+.login-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.sidebar-bg {
+  background:
+    radial-gradient(ellipse 120% 80% at 0% 0%, rgba(0, 173, 239, 0.14), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 100%, rgba(0, 173, 239, 0.08), transparent 50%),
+    linear-gradient(180deg, #0c1a2e 0%, #0a1525 45%, #08111f 100%);
+}

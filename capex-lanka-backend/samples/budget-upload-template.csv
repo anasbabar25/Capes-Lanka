@@ -1,0 +1,6 @@
+reference_code,description,department_code,budget_type,total_amount,financial_year
+BUD-BUFC-101,Printing press overhaul,BUFC,annual,4200000,2026
+BUD-BUFC-102,Lamination line ancillaries,BUFC,annual,1800000,2026
+SBUD-BUFC-201,Digital print cell,BUFC,strategic,6500000,2026
+BUD-BUMF-101,Boiler replacement,BUMF,annual,2700000,2026
+BUD-SYS-101,Network core upgrade,SYSTEMS,annual,900000,2026
